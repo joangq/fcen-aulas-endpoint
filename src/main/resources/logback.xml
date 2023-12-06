@@ -1,0 +1,21 @@
+<configuration>
+
+    <!-- Set the default log level to debug -->
+    <root level="info"/>
+
+    <!-- Define the simple console appender -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <target>
+            System.out
+        </target>
+        <encoder>
+            <pattern>%gray([%d{HH:mm:ss}]) %highlight([%level]) %yellow([%thread:%logger{0}]) %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Attach the console appender to the root logger -->
+    <root>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>
